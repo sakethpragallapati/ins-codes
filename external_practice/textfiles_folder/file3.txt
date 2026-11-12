@@ -1,0 +1,23 @@
+An Introduction to Asymmetric Cryptography and Public Key Distribution
+
+1. Executive Summary
+Asymmetric cryptography, commonly known as public-key cryptography, is a fundamental building block of modern digital security. Unlike symmetric systems where a single secret key is shared between communicating parties, asymmetric systems utilize a mathematically linked key pair: a public key for encryption and a private key for decryption.
+
+2. Fundamental Concepts
+The core strength of public-key algorithms relies on one-way mathematical functions—operations that are straightforward to calculate in one direction but computationally infeasible to invert without specific helper information (the private key).
+
+Key components include:
+- Public Key: Distributed freely to anyone wishing to send an encrypted message or verify a digital signature.
+- Private Key: Kept strictly secret by the owner to decrypt messages or produce digital signatures.
+- Modulus & Totient: Mathematical values derived from large prime numbers that define the operational bounds of the key pair.
+
+3. Common Algorithms
+- RSA (Rivest–Shamir–Adleman): Relies on the computational difficulty of factoring the product of two large prime numbers.
+- ECC (Elliptic Curve Cryptography): Offers comparable security to RSA with significantly smaller key sizes based on the algebraic structure of elliptic curves over finite fields.
+- Diffie-Hellman: A key-exchange protocol allowing two parties to establish a shared secret over an insecure medium.
+
+4. Implementation Guidelines
+When deploying public-key cryptosystems in production:
+- Ensure minimum prime key lengths meet current standards (e.g., 2048-bit or 4096-bit for RSA).
+- Use cryptographically secure pseudorandom number generators (CSPRNG) for prime selection.
+- Combine asymmetric encryption with symmetric ciphers (hybrid encryption) for performance when handling large payloads.

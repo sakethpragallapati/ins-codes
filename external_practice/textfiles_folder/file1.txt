@@ -1,0 +1,4 @@
+Project Alpha Quick Notes
+- Review initial RSA key generation script.
+- Confirm GCD checks function properly for public exponent e.
+- Next team sync scheduled for tomorrow at 10:00 AM.
